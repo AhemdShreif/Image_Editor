@@ -58,7 +58,7 @@ upload.onchange = function(){
 
 function resetdata(){
 
-    img.style.filter = 'none'
+        ctx.filter = 'none'
     saturate.value = '100'
     contrast.value = '100'
     brightness.value = '100'
@@ -66,6 +66,7 @@ function resetdata(){
     grayscale.value = '0'
     hueRotat.value = '0'
     blur.value = '0'
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
 }
 
 let filters = document.querySelectorAll('ul li input')
